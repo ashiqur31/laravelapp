@@ -29,10 +29,3 @@ Route::post('/upload-file', [DashboardController::class,'uploadFile'])->name('fi
 Route::get('/download-file/{id}', [DashboardController::class, 'downloadFile'])->name('download_file');
 
 Route::get('/profile', [ProfileController::class,'viewProfile'])->name('profile');
-
-// routes/api.php
-
-
-Route::middleware('auth:api')->group(function () {
-    Route::get('/files/{file}/data', [FileController::class, 'getData']);
-});
